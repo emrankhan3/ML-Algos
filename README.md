@@ -1,5 +1,6 @@
 linear regression
 
+```python
 import matplotlib.pyplot as plt
 from scipy import stats
 
@@ -17,11 +18,11 @@ plt.scatter(x, y)
 plt.plot(x, mymodel)
 plt.show()
 
-
+```
 
 knn
 
-
+```python
 import matplotlib.pyplot as plt
 
 x = [4, 5, 10, 4, 3, 11, 14 , 8, 10, 12]
@@ -30,10 +31,11 @@ classes = [0, 0, 1, 0, 0, 1, 1, 0, 1, 1]
 
 plt.scatter(x, y, c=classes)
 plt.show()
-
+```
 kmeans clustering
 
 
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cluster import AgglomerativeClustering
@@ -67,10 +69,11 @@ plt.xlabel('Number of clusters')
 plt.ylabel('Inertia')
 plt.show()
 
-
+```
 kmeans ++
 
 
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
@@ -95,9 +98,10 @@ plt.scatter(cluster_centers[:, 0], cluster_centers[:, 1], marker='x', s=200, c='
 plt.title('K-Means++ Clustering')
 plt.show()
 
-
+```
 k-NN algorithm
 
+```python
 import matplotlib.pyplot as plt
 
 x = [4, 5, 10, 4, 3, 11, 14 , 8, 10, 12]
@@ -171,11 +175,12 @@ plt.scatter(x + [new_x], y + [new_y], c=classes + [prediction[0]])
 plt.text(x=new_x-1.7, y=new_y-0.7, s=f"new point, class: {prediction[0]}")
 plt.show()
 
-
+```
 
 DBscan
 
 
+```python
 import numpy as np
 from sklearn.cluster import DBSCAN
 from sklearn.datasets import make_moons
@@ -212,10 +217,11 @@ plt.title(f'DBSCAN Clustering (Estimated number of clusters: {n_clusters_})')
 plt.show()
 
 
-
+```
 Naive bias
 
 
+```python
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
@@ -249,11 +255,12 @@ report = classification_report(y_test, y_pred)
 print(f"Accuracy: {accuracy}")
 print("Classification Report:")
 print(report)
-
+```
 
 
 deep cnn
 
+```python
 import tensorflow as tf
 from tensorflow.keras import datasets, layers, models
 
@@ -286,6 +293,7 @@ model.compile(optimizer='adam',
 # Train the model
 history = model.fit(train_images, train_labels, epochs=10,
                     validation_data=(test_images, test_labels))
+```
 
 # Evaluate the model
 test_loss, test_acc = model.evaluate(test_images,  test_labels, verbose=2)
