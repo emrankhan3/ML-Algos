@@ -50,8 +50,9 @@ labels = hierarchical_cluster.fit_predict(data)
 
 plt.scatter(x, y, c=labels)
 plt.show()
-
+```
 kmeans albo method
+```python
 
 from sklearn.cluster import KMeans
 
